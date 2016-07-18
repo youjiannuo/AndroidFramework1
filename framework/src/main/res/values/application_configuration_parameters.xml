@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--配置首页的Activity,请输入详细的地址，配置是为了让程序出现异常了，应用将会被自动打开-->
+    <string name="yn_home_activity_class">com.yjn.androidfromwrok.MainActivity</string>
+    <!--解析服务器反馈数据的代码-->
+    <!--配置从服务器获取到的model的详细包名，这个将会被自动解析-->
+    <string name="yn_from_service_class">com.yjn.androidfromwrok.model.BackDataModel.class</string>
+    <!--配置web的Activity-->
+    <string name="yn_web_class">  </string>
+    <!--配置登陆Activity-->
+    <string name="yn_login_class">  </string>
+    <!--配置获取服务器数据的状态的字段，这个数在你配置类yn_from_service_class-->
+    <!--注意如果配置的参数层级比较的深，例如下面的格式，我们想要获取error里面的msg，
+    那么配置就这样来写error.msg
+        {
+	        status:"1";
+	        data:"你好"
+	        error:{
+		        "msg":"dds"
+		        "type":"1"
+	        }
+        }
+    -->
+    <string name="yn_from_service_class_status">status</string>
+    <!--这个是获取正确数据的正文信息，如果正文信息不是固定的，请把data删除，放置空在这里。-->
+    <string name="yn_service_class_right_data">data</string>
+    <!--配置需要Toast出错误信息-->
+    <string name="yn_service_class_toast_error">error.errmsg</string>
+    <!--配置获取数据正确的状态 如果直接直接写一个数据，那么判断等于，如果写>10,那么就等于大于10-->
+    <string name="yn_status_right">>0</string>
+    <!--Token失效的-->
+    <string name="yn_token_fail">-500</string>
+    <!--end解析服务器反馈数据的代码-->
+    <!--保存用户信息-->
+    <!--保存用户信息的文件名称,例如存储用户名,密码,token-->
+    <string name="yn_save_user_info_file">UserInfoFile</string>
+    <!--保存用户的账号，必须添加以便自动登录-->
+    <string name="yn_save_name_key">userId</string>
+    <!--保存用户的密码-->
+    <string name="yn_save_pwd_key">userPwd</string>
+    <!--第三方登陆的OPEN_ID-->
+    <string name="yn_open_id">openId</string>
+    <!--token key,将会在发送请求的时候放入的head里面
+    这个key代表的是你存入到文件里面的key
+    如果需要修改请查看代码.http.Http-->
+    <string name="yn_save_token_key">userToken</string>
+    <!--这个是你需要传给服务器对应的key-->
+    <string name="yn_http_toke_key">token</string>
+
+    <!--end 保存用户信息-->
+</resources>

@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.yn.test"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+        //dex突破65535的限制
+        multiDexEnabled true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "hfh"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "ENVIRONMENT", "true"
+            //host ip
+            buildConfigField "String", "HOST", "\"http://www.xxxxx.com\"";
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "${variant.productFlavors[0].name}/huilicai_V${defaultConfig.versionName}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug {
+            buildConfigField "boolean", "ENVIRONMENT", "false"
+            //host ip
+            buildConfigField "String", "HOST", "\"http://test.xxxxx.com\"";
+        }
+    }
+    productFlavors {
+        wandoujia {}
+        yingyongbao {}
+        xiaomi {}
+        baidu {}
+        huawei {}
+        lenovo {}
+        oppo {}
+        meizu {}
+        mumayi {}
+        jifeng {}
+        taobao {}
+        sogou {}
+        _360 {}
+        anzhi {}
+        apc {}
+        hfh1 {}
+        hfh2 {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+}
+
+dependencies {
+    compile project(':framework')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+}

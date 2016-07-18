@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>加载数据中</title>
+</head>
+<style>
+
+
+    #preloader-2{
+    margin: 30px auto;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    }
+
+    #preloader-2 span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff322;
+    border-radius: 999px;
+    vertical-align: center;
+
+    }
+    #preloader-2 span:nth-child(1){
+    animation:cross-1 1.5s infinite linear;
+    -webkit-animation:cross-1 1.5s infinite linear;
+    -moz-animation:cross-1 1.5s infinite linear;
+    -ms-animation:cross-1 1.5s infinite linear;
+    -o-animation:cross-1 1.5s infinite linear;
+    }
+    #preloader-2 span:nth-child(2){
+    animation:move 1.5s infinite linear;
+    -webkit-animation:move 1.5s infinite linear;
+    -moz-animation:move 1.5s infinite linear;
+    -ms-animation:move 1.5s infinite linear;
+    -o-animation:move 1.5s infinite linear;
+    }
+
+    p{
+    margin-left: 40%;
+    }
+
+    @keyframes cross-1{
+    0% {left: 40%;opacity: 1; }
+    50% {left: 60%;opacity: 0.5;}
+    100% {left: 40%;opacity: 1;}
+    }
+
+    @keyframes move{
+    0% {left: 60%;opacity: 1;}
+    50% {left: 40%;opacity: 0.5;}
+    100% {left: 60%;opacity: 1;}
+    }
+    @-webkit-keyframes cross-1{
+    0% {left: 40%;opacity: 1; }
+    50% {left: 60%;opacity: 0.5;}
+    100% {left: 40%;opacity: 1;}
+    }
+
+    @-webkit-keyframes move{
+    0% {left: 60%;opacity: 1;}
+    50% {left: 40%;opacity: 0.5;}
+    100% {left: 60%;opacity: 1;}
+    }
+    @-moz-keyframes cross-1{
+    0% {left: 40%;opacity: 1; }
+    50% {left: 60%;opacity: 0.5;}
+    100% {left: 40%;opacity: 1;}
+    }
+
+    @-moz-keyframes move{
+    0% {left: 60%;opacity: 1;}
+    50% {left: 40%;opacity: 0.5;}
+    100% {left: 60%;opacity: 1;}
+    }
+
+    @-ms-keyframes cross-1{
+    0% {left: 40%;opacity: 1; }
+    50% {left: 60%;opacity: 0.5;}
+    100% {left: 40%;opacity: 1;}
+    }
+
+    @-ms-keyframes move{
+    0% {left: 60%;opacity: 1;}
+    50% {left: 40%;opacity: 0.5;}
+    100% {left: 60%;opacity: 1;}
+    }
+
+    @-o-keyframes cross-1{
+    0% {left: 40%;opacity: 1; }
+    50% {left: 60%;opacity: 0.5;}
+    100% {left: 40%;opacity: 1;}
+    }
+    @-o-keyframes move{
+    0% {left: 60%;opacity: 1;}
+    50% {left: 40%;opacity: 0.5;}
+    100% {left: 60%;opacity: 1;}
+    }
+
+</style>
+<body>
+<div id="preloader-2">
+    <span></span>
+    <span></span>
+</div>
+<p>加载数据中...</p>
+</body>
+</html>

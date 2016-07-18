@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yn.framework.view.YNFrameWork xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameWork"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yn_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/y_view_navigation_bar" />
+
+    <include
+        layout="@layout/y_view_operation_remind"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y_top_bar_height" />
+
+</com.yn.framework.view.YNFrameWork>

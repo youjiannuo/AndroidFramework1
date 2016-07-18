@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/height_wrap_width_match"
+    android:background="@color/color_alpha"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_alpha"
+        android:visibility="gone" />
+
+    <LinearLayout
+        style="@style/match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/hfh_bg_radius_3_white_rect"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="标题"
+            android:textColor="@color/hfh_font_remind_color_normal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            android:text="这个是正文是觉得静静地思考了姐夫的就是房价快速的大大幅"
+            android:textSize="@dimen/hfh_font_size_normal" />
+
+        <TextView style="@style/fhf_remind_line_vertical" />
+
+        <LinearLayout
+            style="@style/height_wrap_width_match"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/leftButton"
+                style="@style/fhf_alter_dialog_button_left"
+                android:text="是" />
+
+            <TextView
+                android:id="@+id/line1"
+                style="@style/fhf_remind_line_horizontal" />
+
+            <Button
+                android:id="@+id/centerButton"
+                style="@style/hfh_alter_dialog_button_center"
+                android:text="否" />
+
+            <TextView
+                android:id="@+id/line2"
+                style="@style/fhf_remind_line_horizontal" />
+
+            <Button
+                android:id="@+id/rightButton"
+                style="@style/hfh_alter_dialog_button_right"
+                android:text="确定" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_alpha"
+        android:visibility="gone" />
+
+</LinearLayout>

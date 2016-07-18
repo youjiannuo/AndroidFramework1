@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:background="@drawable/y_wifi_bg"
+                android:scaleType="center"
+                android:src="@drawable/y_wifi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="@string/y_network_exception_try_again"
+                android:textColor="#FFABABAB"
+                android:textSize="@dimen/hfh_font_size_larger" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/progress1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/hfh_remind_get_data"
+            android:layout_gravity="center"
+            android:src="@drawable/hfh_refresh"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/upLoadNull"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/y_up_load_null"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/nullMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFABABAB"
+            android:textSize="@dimen/hfh_font_size_larger" />
+    </LinearLayout>
+</FrameLayout>

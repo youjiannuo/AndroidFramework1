@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="match_parent">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="wrap_content">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="height_wrap_width_match">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="height_match_width_wrap">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="hfh_remind_get_data" parent="wrap_content">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="progress_bar" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/y_progress_bar_bg</item>
+        <item name="android:minWidth">21dip</item>
+        <item name="android:maxWidth">21dip</item>
+        <item name="android:minHeight">21dip</item>
+        <item name="android:maxHeight">21dip</item>
+    </style>
+
+    <style name="app_tips">
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:paddingRight">13dp</item>
+        <item name="android:textColor">@color/pull_to_refresh_header_vertical_title</item>
+    </style>
+
+
+    <!--提醒框-->
+    <style name="fhf_remind_line">
+        <item name="android:background">#dedede</item>
+    </style>
+
+    <style name="fhf_remind_line_vertical" parent="fhf_remind_line">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+
+    <style name="fhf_alter_dialog_button" parent="match_parent">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/hfh_font_size_normal</item>
+    </style>
+
+    <style name="fhf_alter_dialog_button_left" parent="fhf_alter_dialog_button">
+        <item name="android:background">@drawable/hfh_button_bottom_left_radius_3_white</item>
+    </style>
+
+    <style name="fhf_remind_line_horizontal" parent="fhf_remind_line">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1px</item>
+    </style>
+
+    <style name="hfh_alter_dialog_button_center" parent="fhf_alter_dialog_button">
+        <item name="android:background">@drawable/hfh_button_white</item>
+    </style>
+
+    <style name="hfh_alter_dialog_button_right" parent="fhf_alter_dialog_button">
+        <item name="android:background">@drawable/hfh_button_bottom_right_radius_3_white</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="fhf_info_title.line" parent="match_parent">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/red</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="progress_horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/horizontal_progress</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:max">100</item>
+        <item name="android:progress">0</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="fhf_info_title" parent="match_parent">
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="fhf_info_title.text" parent="wrap_content">
+        <item name="android:textSize">@dimen/hfh_font_size_small</item>
+        <item name="android:textColor">#FF9b9b9b</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

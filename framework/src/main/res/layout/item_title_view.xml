@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fhf_info_title">
+
+    <TextView
+        android:id="@+id/value"
+        style="@style/fhf_info_title.text"
+        android:textColor="#FF9B9B9B" />
+
+    <View
+        android:id="@+id/lineBottom"
+        style="@style/fhf_info_title.line"
+        android:visibility="gone" />
+
+    <View
+        style="@style/fhf_remind_line_horizontal"
+        android:layout_gravity="right"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp" />
+
+</FrameLayout>

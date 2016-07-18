@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--账号登陆-->
+    <string-array name="yn_login_id">
+        <item>url:</item>
+        <!--传给服务器的key-->
+        <item>key:id,pwd</item>
+        <!--反射成功后的回调方法,将会反射给LoginActivity-->
+        <item>method:onSuccess</item>
+    </string-array>
+
+    <!--第三方登陆-->
+    <string-array name="yn_login_third">
+        <item>url:</item>
+        <item>key:openid</item>
+        <!--反射成功后的回调方法-->
+        <item>method:onSuccess</item>
+    </string-array>
+
+</resources>

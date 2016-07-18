@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--背景主要颜色-->
+    <color name="yn_bg_color">#FFFF</color>
+    <!--状态栏的颜色 ,这里只有Android5.0以上的有效果-->
+    <color name="yn_status_bar_bg_color">#FF000000</color>
+    <!--加载更多的颜色-->
+    <color name="pull_to_refresh_header_vertical_title">#ff999999</color>
+    <!--透明-->
+    <color name="color_alpha">#0000</color>
+    <!-- 普通的字体颜色 -->
+    <color name="hfh_font_remind_color_normal">#ff535353</color>
+    <!--弹框按钮的颜色-->
+    <color name="red">#E85F39</color>
+    <!-- 点击的变化的颜色 -->
+    <color name="hfh_remind_bg_click">#FFF5F5F5</color>
+    <!--字体颜色白色-->
+    <color name="hfh_font_color_white">#FFFFFFFF</color>
+    <!--灰色字体-->
+    <color name="hfh_font_color_gray">#FF9B9B9B</color>
+    <!--绿色-->
+    <color name="fhf_color_green">#24a509</color>
+    <color name="gray">#F2F2F2</color>
+    <!--具备0.3的透明度-->
+    <color name="fhf_white_white_alpha_3">#B3FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#24a509</color>
+</resources>

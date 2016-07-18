@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">framework</string>
+
+    <string name="y_network_exception_try_again">网络出错，轻触屏幕重新加载</string>
+
+    <string name="yn_i_know">我知道了</string>
+    <string name="yn_program_erro_resume">程序异常，正在恢复…</string>
+    <string name="yn_toast">提示</string>
+    <string name="yn_load_more_text">加载更多</string>
+    <string name="yn_list_to_bottom_text">不要滑了，人家已经没有了啦!</string>
+    <string name="hfh_not_have_stock">暂时没有符合条件的股票</string>
+    <string name="hfh_network_shutdown">网络不给力，请检查网络</string>
+    <string name="hfh_connection_time_out">连接超时，请换个网络环境再试</string>
+    <string name="hfh_shake_is_fail_please_exit_try">摇一摇异常，退出重试</string>
+    <string name="hfh_click_get">点击获取</string>
+    <string name="hfh_re_send">重新发送</string>
+    <string name="hfh_is_quxiao">取消</string>
+    <string name="ok">确定</string>
+    <string name="hfh_is_delete">是否删除</string>
+</resources>

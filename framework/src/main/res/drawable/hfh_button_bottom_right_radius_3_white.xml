@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Non focused states -->
+
+    <item android:state_focused="false" android:state_selected="false"
+        android:state_pressed="false" >
+    	<shape >
+    	    <solid android:color="#FFFFFFFF" />
+    	    <corners android:bottomRightRadius="3dp" />
+    	</shape>
+    </item>
+
+    <item android:state_focused="false" android:state_selected="true"
+        android:state_pressed="false" android:drawable="@drawable/hfh_bg_bottom_right_radius_3_while_rect" >
+    	
+    </item>
+	
+    <!-- Focused states -->
+
+    <item android:state_focused="true" android:state_selected="false"
+
+        android:state_pressed="false" android:drawable="@drawable/hfh_bg_bottom_right_radius_3_while_rect" />
+
+    <item android:state_focused="true" android:state_selected="true"
+
+        android:state_pressed="false" android:drawable="@drawable/hfh_bg_bottom_right_radius_3_while_rect" />
+    <!-- Pressed -->
+
+    <item android:state_selected="true" android:state_pressed="true"
+
+        android:drawable="@drawable/hfh_bg_bottom_right_radius_3_while_rect" />
+
+    <item android:state_pressed="true"
+
+        android:drawable="@drawable/hfh_bg_bottom_right_radius_3_while_rect" />
+</selector>

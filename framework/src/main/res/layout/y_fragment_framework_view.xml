@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yn.framework.view.YNRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/y_view_navigation_bar" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/barView" />
+
+    <com.yn.framework.view.YNFrameLayout
+        android:id="@+id/hfhFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.yn.framework.view.YNRelativeLayout>

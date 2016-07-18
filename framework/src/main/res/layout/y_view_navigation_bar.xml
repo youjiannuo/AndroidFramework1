@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yn.framework.view.NavigationBarView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/barView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y_top_bar_height"
+    android:background="@color/red"
+    android:orientation="vertical">
+
+    <!--导航栏-->
+    <LinearLayout
+        android:id="@+id/left"
+        style="@style/height_match_width_wrap"
+        android:background="@drawable/hfh_bg_click_gray_434343"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/leftImageView"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/leftTextView"
+            style="@style/wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/topProgress"
+        style="@style/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/center"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/center"
+        style="@style/height_match_width_wrap"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/wrap_content"
+            android:layout_centerInParent="true"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:text="@null"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            style="@style/height_match_width_wrap"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/titleButtonLeft"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@color/color_alpha"
+                    android:text="@null"
+                    android:textColor="@color/hfh_font_color_white"
+                    android:textSize="@dimen/hfh_font_size_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/titleButtonLeftTop"
+                    android:layout_width="80dp"
+                    android:layout_height="4dp"
+                    android:background="@color/fhf_color_green"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/titleButtonRight"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@color/color_alpha"
+                    android:text="@null"
+                    android:textColor="@color/hfh_font_color_white"
+                    android:textSize="@dimen/hfh_font_size_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/titleButtonRightTop"
+                    android:layout_width="80dp"
+                    android:layout_height="4dp"
+                    android:background="#FFFF"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/hfh_bg_click_gray_434343"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/rightImageViewButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="右边按钮"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/hfh_font_size_normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.yn.framework.view.NavigationBarView>
