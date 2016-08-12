@@ -76,7 +76,7 @@ public class YNTextView extends TextView implements OnYNOperation {
         return "";
     }
 
-
+    
     @Override
     public void setData(Object obj) {
         mYJNView.setData(obj);
@@ -167,5 +167,15 @@ public class YNTextView extends TextView implements OnYNOperation {
     @Override
     public Object getData() {
         return mData;
+    }
+
+    @Override
+    public OnYNOperation[] getYNOperation() {
+        return new OnYNOperation[0];
+    }
+
+    @Override
+    public void setYNOperation(OnYNOperation[] operations) {
+
     }
 }

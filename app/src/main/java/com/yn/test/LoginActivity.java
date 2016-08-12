@@ -1,5 +1,7 @@
 package com.yn.test;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
 import com.yn.framework.activity.YNAutomaticActivity;
@@ -15,6 +17,7 @@ public class LoginActivity extends YNAutomaticActivity {
     protected void initView() {
         super.initView();
         mLoginController = new MyLoginController(this, this);
+
     }
 
     @Override
@@ -29,7 +32,8 @@ public class LoginActivity extends YNAutomaticActivity {
      * @param data
      */
     public void onSuccess(String data) {
-
+        Handler handler = new Handler();
+        Looper.prepare();
     }
 
 

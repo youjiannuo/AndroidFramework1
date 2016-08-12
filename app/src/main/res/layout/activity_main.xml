@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yn.test.YNLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.yn.test.YNLinearLayout1
+        android:id="@+id/left1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yn.test.YNTextView
+            android:id="@+id/text"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#FF0000"
+            android:text="323j2iie" />
+
+        <com.yn.test.YNImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading" />
+
+    </com.yn.test.YNLinearLayout1>
+</com.yn.test.YNLinearLayout>

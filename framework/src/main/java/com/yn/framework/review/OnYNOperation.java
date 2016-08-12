@@ -1,5 +1,6 @@
 package com.yn.framework.review;
 
+
 import com.yn.framework.review.manager.OnBackListener;
 
 /**
@@ -19,4 +20,7 @@ public interface OnYNOperation {
 
     Object getData();
 
+    OnYNOperation[] getYNOperation();
+
+    void setYNOperation(OnYNOperation[] operations);
 }

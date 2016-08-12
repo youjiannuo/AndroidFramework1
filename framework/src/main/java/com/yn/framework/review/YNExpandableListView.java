@@ -223,6 +223,16 @@ public class YNExpandableListView extends YJNExpandableListView<String, String>
     }
 
     @Override
+    public OnYNOperation[] getYNOperation() {
+        return new OnYNOperation[0];
+    }
+
+    @Override
+    public void setYNOperation(OnYNOperation[] operations) {
+
+    }
+
+    @Override
     public YNController getYNController() {
         return mController;
     }

@@ -98,5 +98,15 @@ public class YNImageView extends ImageViewNetwork implements OnYNOperation {
         return mData;
     }
 
+    @Override
+    public OnYNOperation[] getYNOperation() {
+        return new OnYNOperation[0];
+    }
+
+    @Override
+    public void setYNOperation(OnYNOperation[] operations) {
+
+    }
+
 
 }

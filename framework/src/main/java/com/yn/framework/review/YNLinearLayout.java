@@ -33,6 +33,7 @@ public class YNLinearLayout extends LinearLayout implements OnYNOperation, YNHtt
     private boolean mFirstRun = false;
     private Object mData;
     private YNCommonActivity mActivity;
+    private OnYNOperation[] mYNOperations;
 
     public YNLinearLayout(Context context) {
         super(context);
@@ -67,9 +68,9 @@ public class YNLinearLayout extends LinearLayout implements OnYNOperation, YNHtt
         } else if (mType == 2) {
             //最开始的LinearLayout
             if (obj instanceof JSON) {
-                new YNManager(this, (JSON) obj).setStartData(mPosition);
+                new YNManager(this, (JSON) obj).setStartData(mPosition , this);
             } else {
-                new YNManager(this, new JSON(obj.toString())).setStartData(mPosition);
+                new YNManager(this, new JSON(obj.toString())).setStartData(mPosition,this);
             }
         } else {
             ToastUtil.showFailMessage("请设置app:type=start");
@@ -105,6 +106,15 @@ public class YNLinearLayout extends LinearLayout implements OnYNOperation, YNHtt
         return mData;
     }
 
+    @Override
+    public OnYNOperation[] getYNOperation() {
+        return mYNOperations;
+    }
+
+    @Override
+    public void setYNOperation(OnYNOperation[] operation) {
+        mYNOperations = operation;
+    }
 
     @Override
     public void showErrorView() {
@@ -185,6 +195,7 @@ public class YNLinearLayout extends LinearLayout implements OnYNOperation, YNHtt
         });
         return null;
     }
+
 
     @Override
     public YNController getYNController() {

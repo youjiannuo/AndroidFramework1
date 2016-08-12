@@ -37,13 +37,21 @@ public class YNManager {
         }
     }
 
-    public void setStartData(int position) {
+    public void setStartData(int position, OnYNOperation parent) {
         List<Integer> res = new ArrayList<>();
-        getResourceId(mViewGroup, res);
-        for (int i = 0; i < res.size(); i++) {
-            OnYNOperation onYNOperation = ((OnYNOperation) mViewGroup.findViewById(res.get(i)));
-            onYNOperation.setPosition(position);
-            onYNOperation.setData(mJson);
+        OnYNOperation operations[] = parent.getYNOperation();
+        boolean is = false;
+        if (operations == null) {
+            getResourceId(mViewGroup, res);
+            operations = new OnYNOperation[res.size()];
+            is = true;
+        }
+        for (int i = 0; i < operations.length; i++) {
+            if (is) {
+                operations[i] = (OnYNOperation) mViewGroup.findViewById(res.get(i));
+            }
+            operations[i].setPosition(position);
+            operations[i].setData(mJson);
         }
     }
 
@@ -62,8 +70,9 @@ public class YNManager {
             View view = viewGroup.getChildAt(i);
             if (view instanceof ViewGroup) {
                 getResourceId((ViewGroup) view, res);
+            } else {
+                addId(view, res);
             }
-            addId(view, res);
         }
     }
 

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.google.gson.reflect.TypeToken;
+import com.yn.framework.R;
 import com.yn.framework.activity.BaseFragment;
 import com.yn.framework.activity.YNCommonActivity;
 import com.yn.framework.data.JSON;
@@ -19,8 +20,8 @@ import com.yn.framework.review.manager.OnBackListener;
 import com.yn.framework.review.manager.YNController;
 import com.yn.framework.review.manager.YNManager;
 import com.yn.framework.system.StringUtil;
+import com.yn.framework.system.SystemUtil;
 import com.yn.framework.view.YJNListView;
-import com.yn.framework.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,7 +128,6 @@ public class YNListView extends YJNListView<String> implements YNHttpOperation, 
     @Override
     public void closeLoadMore() {
         super.closeLoadMore();
-
         if (mShowLoadOver && isLoadMore() && getList().size() > 10) {
             if (mFootView != null) {
                 mFootView.setVisibility(View.VISIBLE);
@@ -151,6 +151,7 @@ public class YNListView extends YJNListView<String> implements YNHttpOperation, 
 
     @Override
     public View createView(int position, String data) {
+        SystemUtil.printlnInfo("");
         View valueView = LayoutInflater.from(getContext()).inflate(mValueLayout, null);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, mItemHeight);
         valueView.setLayoutParams(params);
@@ -173,11 +174,20 @@ public class YNListView extends YJNListView<String> implements YNHttpOperation, 
 
     @Override
     public void setViewData(View view, int position, String data) {
-        if (mRes == null) {
-            mRes = new ArrayList<>();
-            YNManager.getResourceId((ViewGroup) view, mRes);
+        OnYNOperation operations[];
+        if (view.getTag() == null) {
+            if (mRes == null) {
+                mRes = new ArrayList<>();
+                YNManager.getResourceId((ViewGroup) view, mRes);
+            }
+            operations = new OnYNOperation[mRes.size()];
+            for (int i = 0; i < mRes.size(); i++) {
+                operations[i] = (OnYNOperation) view.findViewById(mRes.get(i));
+            }
+            view.setTag(operations);
+        } else {
+            operations = (OnYNOperation[]) view.getTag();
         }
-
         if (mTitleValue != 0) {
             if (position == 0) {
                 view.setClickable(false);
@@ -191,8 +201,8 @@ public class YNListView extends YJNListView<String> implements YNHttpOperation, 
             }
         } else view.setClickable(true);
         setClick(view, data);
-        for (int i = 0; i < mRes.size(); i++) {
-            OnYNOperation operation = (OnYNOperation) view.findViewById(mRes.get(i));
+        for (int i = 0; i < operations.length; i++) {
+            OnYNOperation operation = operations[i];
             operation.setPosition(position);
             operation.setData(new JSON(data));
             if (operation.getOnClick() != 0 && mOnBackListener != null) {
@@ -293,6 +303,16 @@ public class YNListView extends YJNListView<String> implements YNHttpOperation, 
     @Override
     public Object getData() {
         return null;
+    }
+
+    @Override
+    public OnYNOperation[] getYNOperation() {
+        return new OnYNOperation[0];
+    }
+
+    @Override
+    public void setYNOperation(OnYNOperation[] operations) {
+
     }
 
     @Override
